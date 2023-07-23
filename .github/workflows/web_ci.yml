@@ -30,6 +30,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     name: Build Web
+    env:
+      my_secret: ${{secrets.commit_secret}}
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -44,3 +46,15 @@ jobs:
       - run: flutter build web --release
       - run: |
           cd build/web
+          git init
+          # type configurations: your user.email and user.name followed lines 
+          # git config --global user.email your_email 
+          # git config --global user.name your_name 
+          git config --global user.email pranilshah4024@gmail.com
+          git config --global user.name pranilshah4024
+          git status
+          git remote add origin https://${{secrets.commit_secret}}@github.com/pranilshah4024/pixelratio.github.io.git
+          git checkout -b gh-pages
+          git add --all
+          git commit -m "update"
+          git push origin gh-pages -f

@@ -1,6 +1,6 @@
-# size_config
+# Pixel Ration Calculation
 
-A new Flutter project.
+A Flutter project that calculates the device pixel ratio for responsiveness based on MediaQuery.
 
 ## Getting Started
 

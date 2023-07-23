@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       builder: (context, appState, child) {
         appState.setCurrentTheme();
         return MaterialApp(
-          title: 'Pixel Ratio Calculation',
+          title: 'Pixel Ratio Calculation | Pranil Shah',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,

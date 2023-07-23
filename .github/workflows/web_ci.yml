@@ -61,7 +61,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: subosito/flutter-action@v2
         with:
@@ -82,6 +82,6 @@ jobs:
           github_token: ${{ secrets.COMMIT_SECRET }}
           publish_dir: ./build/web
           force_orphan: true
-          user_name: 'github-ci[bot]'
+          user_name: 'pranilshah4024'
           user_email: 'pranilshah4024@gmail.com'
           commit_message: 'Publish to gh-pages'
